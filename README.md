@@ -1,2 +1,2 @@
 # invoicepl
-simple app to create invoice.
+Simple app to create invoice.
