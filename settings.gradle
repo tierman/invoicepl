@@ -2,4 +2,5 @@ rootProject.name = 'invoicepl'
 include 'domain'
 include 'entrypoint'
 include 'infrastructure'
+include 'application'
 

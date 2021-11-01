@@ -1,2 +1,6 @@
 /.idea/
 /.gradle/
+/application/build/
+/entrypoint/build/
+/infrastructure/build/
+/build/

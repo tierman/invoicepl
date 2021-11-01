@@ -10,4 +10,5 @@ public class Payment {
     private String amountAsText;
     private String bankName;
     private String bankAccount;
+    private String comment;
 }

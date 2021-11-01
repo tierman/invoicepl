@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/invoice_pl
+    driver-class-name: org.postgresql.Driver
+    username: invoice_pl
+    password: invoice_pl

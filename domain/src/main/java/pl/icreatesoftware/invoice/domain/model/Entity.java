@@ -3,7 +3,7 @@ package pl.icreatesoftware.invoice.domain.model;
 import java.util.List;
 import java.util.UUID;
 
-public class Company {
+public class Entity {
     private UUID uuid;
     private String name;
     private Address address;

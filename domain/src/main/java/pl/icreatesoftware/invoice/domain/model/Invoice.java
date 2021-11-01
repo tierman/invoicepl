@@ -1,5 +1,7 @@
 package pl.icreatesoftware.invoice.domain.model;
 
+import pl.icreatesoftware.invoice.domain.ports.InvoicePort;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,8 +14,14 @@ public class Invoice {
     private LocalDate sellingDate;
     private LocalDate issueDate;
     private String issuePlace;
-    private Company seller;
-    private Company buyer;
+    private Entity seller;
+    private Entity buyer;
     private List<InvoiceItem> invoiceItemList;
     private Payment payment;
+
+    private InvoicePort repository;
+
+    public Invoice save() {
+        return repository.save(this);
+    }
 }
