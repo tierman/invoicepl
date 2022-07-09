@@ -1,6 +1,8 @@
 allprojects {
     plugins.apply('java')
     plugins.apply('application')
+    //plugins.apply('checkstyle')
+    plugins.apply('idea')
 
     group 'pl.icreatesoftware'
     version '1.0-SNAPSHOT'
@@ -21,9 +23,9 @@ dependencies {
     testImplementation project(':entrypoint')
     testImplementation project(':infrastructure')
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    testImplementation 'com.tngtech.archunit:archunit-junit5:0.22.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'com.tngtech.archunit:archunit-junit5:0.23.1'
 }
 
 test {

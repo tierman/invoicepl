@@ -3,7 +3,7 @@ package pl.icreatesoftware.invoice.domain.model;
 import java.math.BigDecimal;
 import java.util.Currency;
 
-public class InvoiceItem {
+class InvoiceItem {
     private short number;
     private String name;
     private Integer quantity;

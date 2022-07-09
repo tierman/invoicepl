@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 class InvoiceController {
 
-
     @GetMapping("/ping")
     String ping() {
         return "testRegisterInvoice";
