@@ -1,8 +1,13 @@
 package pl.icreatesoftware.invoice.domain.model;
 
+import lombok.Builder;
+import lombok.Getter;
+
 import java.util.UUID;
 
-public class Address {
+@Getter
+@Builder
+class Address {
     private UUID uuid;
     private String city;
     private String post;

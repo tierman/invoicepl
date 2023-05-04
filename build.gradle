@@ -1,2 +1,38 @@
-group 'pl.icreatesoftware'
-version '1.0-SNAPSHOT'
+plugins {
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
+}
+
+allprojects {
+    group 'pl.icreatesoftware'
+    version '0.0.1-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencyManagement {
+        imports {
+            mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url "https://packages.confluent.io/maven/"
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+springBoot {
+    buildInfo()
+}

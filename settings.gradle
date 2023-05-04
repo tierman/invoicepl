@@ -1,5 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
 rootProject.name = 'invoicepl'
 include 'domain'
 include 'entrypoint'
 include 'infrastructure'
+include 'application'
 
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            plugin('spring-boot', 'org.springframework.boot').versionRef('spring-boot-version')
+            plugin('spring-dependency-management', 'io.spring.dependency-management').versionRef('spring-dependency-management-version')
+            library("junit-jupiter", "org.junit.jupiter", "junit-jupiter-api").versionRef('junit-version')
+            library("junit-engine", "org.junit.jupiter", "junit-jupiter-engine").withoutVersion()
+            library("lombok", "org.projectlombok", "lombok").withoutVersion()
+            library("mockito", "org.mockito", "mockito-core").versionRef('mockito-version')
+            //library("assertj", "org.assertj", "assertj-core").versionRef('assertj-version')
+
+            version('spring-boot-version', '3.0.6')
+            version('spring-dependency-management-version', '1.1.0')
+            version('junit-version', '5.9.2')
+            version('mockito-version', '5.3.1')
+            //version('assertj-version', '3.24.2')
+
+        }
+    }
+}
